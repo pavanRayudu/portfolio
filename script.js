@@ -13,4 +13,4 @@ theme_button.addEventListener('click', (e) => {
     }
 })
 
-background: url('./assets/sun-svgrepo-com.svg');
+// background: url('./assets/sun-svgrepo-com.svg');
