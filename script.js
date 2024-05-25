@@ -3,6 +3,8 @@ const scroller = document.querySelector('.wrapper');
 const nav_toggler = document.querySelector('.nav-toggler');
 const navbar__links = document.querySelector('.navbar__links');
 const nav_closer = document.querySelector('.nav-closer');
+const gotoTop_btn = document.querySelector('.goto-top');
+
 
 // nav toggling
 
@@ -22,8 +24,8 @@ nav_toggler.addEventListener('click', (e) => {
 
     })
 })
-nav_closer.addEventListener('click',(e) => {
-    navbar__links.setAttribute('data-visible',false);
+nav_closer.addEventListener('click', (e) => {
+    navbar__links.setAttribute('data-visible', false);
     nav_closer.style.display = "none"
 })
 // Theme Changer

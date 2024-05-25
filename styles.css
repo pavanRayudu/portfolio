@@ -65,8 +65,7 @@ main {
 }
 
 header {
-    position: sticky;
-    top: 0;
+    
     background-color: var(--color-primary-100);
 
     .navbar {
@@ -328,6 +327,23 @@ main {
     }
 }
 
+footer{
+    width: 100%;
+    background-color: var(--color-primary-800);
+    margin-top: 2rem;
+    color: var(--color-primary-200);
+    font-size: 0.8rem;
+    padding-inline:1rem;
+    
+    .footer-elements {
+        display: flex;
+        justify-content: space-between;
+      
+
+    }
+}
+
+
 
 @keyframes scroll {
     from {
@@ -414,6 +430,10 @@ main {
                 }
             }
         }
+    }
+
+    footer{
+        padding-inline: 10rem;
     }
 
 }
