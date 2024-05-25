@@ -162,7 +162,6 @@ header {
         display: block;
         z-index: 1001;
         color: var(--color-primary-200);
-        background-color: var(--color-primary-200);
     }
 
 
