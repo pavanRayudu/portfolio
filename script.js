@@ -9,11 +9,11 @@ const nav_closer = document.querySelector('.nav-closer');
 nav_toggler.addEventListener('click', (e) => {
     let state = navbar__links.getAttribute('data-visible');
     if (state === 'false') {
-        navbar__links.setAttribute('data-visible', true)
+        navbar__links.setAttribute('data-visible', true);
         nav_closer.style.display = "block";
     }
     else {
-        navbar__links.setAttribute('data-visible', false)
+        navbar__links.setAttribute('data-visible', false);
     }
 
     document.addEventListener('scroll', () => {
