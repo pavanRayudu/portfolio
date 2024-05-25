@@ -33,7 +33,7 @@
             <div class="navbar-elements">
 
 
-                <ul class="navbar__links">
+                <ul data-visible="false" class="navbar__links">
                     <li class="nav-link">Home</li>
                     <li class="nav-link">About</li>
                     <li class="nav-link">Projects</li>
@@ -41,7 +41,9 @@
                     <li class="nav-link">Blogs</li>
                 </ul>
                 <div class="nav-features">
-                    <button class="theme-option"></button>
+                    <button class="btn theme-option"></button>
+                    <button class="btn nav-toggler"></button>
+                    <button class="btn nav-closer"></button>
                 </div>
             </div>
 
@@ -55,7 +57,7 @@
                     <h1>Frontend Developer</h1>
                 </div>
                 <div class="hero-content__details">
-                    <p>Based In Hyderabad, India</p>
+                    <p>Hyderabad, India</p>
                     <p>Expertise in Designing and Developing modern user friendly and mobile
                         responsive web applications </p>
                 </div>
@@ -141,7 +143,7 @@
             <div class="my-skill-set">
                 <h2>My skill set</h2>
                 <div class="wrapper">
-                    <ul>
+                    <ul class="scroller">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
@@ -151,6 +153,7 @@
                         <li>Bootstrap</li>
                         <li>Sass</li>
                         <li>Git</li>
+                        
                     </ul>
                 </div>
             </div>
