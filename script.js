@@ -40,6 +40,7 @@ theme_button.addEventListener('click', (e) => {
     }
 })
 
+<<<<<<< HEAD
 // Infinite Corousel
 
 
@@ -62,4 +63,6 @@ function addAnimation() {
     console.log(scrollerContent)
 
 }
+=======
+>>>>>>> 0ae75e1005b03f4a4bdb5330a075b6e91a20f22d
 // background: url('./assets/sun-svgrepo-com.svg');
