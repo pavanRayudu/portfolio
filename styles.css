@@ -19,26 +19,15 @@
 [data-theme="dark"] {
 
     /** CSS DARK THEME PRIMARY COLORS */
-    --color-primary-100: #03a9f4;
-    --color-primary-200: #4ab2f5;
-    --color-primary-300: #6abcf7;
+    --color-primary-100: #000000;
+    --color-primary-200: #2e3439;
+    --color-primary-300: #454a4f;
     --color-primary-400: #84c5f8;
     --color-primary-500: #9bcefa;
     --color-primary-600: #b1d8fb;
-    /** CSS DARK THEME SURFACE COLORS */
-    --color-surface-100: #121212;
-    --color-surface-200: #282828;
-    --color-surface-300: #3f3f3f;
-    --color-surface-400: #575757;
-    --color-surface-500: #717171;
-    --color-surface-600: #8b8b8b;
-    /** CSS DARK THEME MIXED SURFACE COLORS */
-    --color-surface-mixed-100: #191f25;
-    --color-surface-mixed-200: #2e3439;
-    --color-surface-mixed-300: #454a4f;
-    --color-surface-mixed-400: #5d6166;
-    --color-surface-mixed-500: #76797e;
-    --color-surface-mixed-600: #8f9396;
+    --color-primary-800: #ffffff;
+    --color-primary-900: #ffffff;
+   
 
 }
 
@@ -49,7 +38,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
 
+}
 body {
     font-family: "Roboto", sans-serif;
     font-size: var(--font-size);
@@ -60,15 +52,22 @@ body {
 p {
     line-height: 1.6;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
 
 header,
 main {
     margin-inline: 1rem;
     overflow: hidden;
+    z-index: 999;
 }
 
 header {
-    /* background-color: rgb(218, 218, 218); */
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-100);
 
     .navbar {
         display: flex;
@@ -76,11 +75,7 @@ header {
         align-items: center;
         padding-block: 1rem;
         background-color: var(--bg-color);
-        color: var(--text-color);
 
-        .logo svg {
-            color: var(--text-color);
-        }
 
         .navbar-elements {
             display: flex;
@@ -94,13 +89,14 @@ header {
                 }
 
                 .nav-toggler {
-                    background: url('./assets//hamburger-menu-svgrepo-com.svg');
+                    background: none;
                 }
 
                 .nav-closer{
+                    color: red;
                     display:none;
                     position: absolute;
-                    top: 1.5rem;
+                    top: 2.5rem;
                     right: 1.5rem;
                     background: url('./assets/close-md-svgrepo-com.svg');
 
@@ -115,6 +111,7 @@ header {
                     background-repeat: no-repeat;
                     background-size: 100%;
                     border: none;
+                    color: var(--color-primary-900);
                 }
             }
 
@@ -144,15 +141,17 @@ header {
     .navbar__links {
         display: none;
         position: fixed;
-        inset: 0 0 0 20%;
-        background-color: var(--color-primary-800);
-        color: var(--color-primary-200);
+        inset: 0;
+        background-color: rgb(40, 40, 40);
+        color: whitesmoke;
         text-align: center;
         flex-direction: column;
         transform: translateX(100%);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.2s ease-out;
         padding-top: 10rem;
         z-index: 999;
+        overflow: hidden;
+        
     }
 
     .navbar__links[data-visible="true"] {
@@ -161,7 +160,6 @@ header {
     .nav-closer{
         display: block;
         z-index: 1001;
-        color: var(--color-primary-200);
     }
 
 
@@ -263,7 +261,7 @@ main {
             margin-top: 2rem;
             padding-inline: 0.5rem;
             line-height: 1.5;
-            text-align: justify;
+            /* text-align: justify; */
             text-indent: 4rem;
             padding-inline: 1.5rem;
         }
@@ -315,11 +313,13 @@ main {
 
 
                     li {
-                        background-color: var(--color-primary-700);
-                        color: var(--color-primary-200);
+                        background-color: var(--color-primary-300);
                         border-radius: 5px;
                         padding: 0.5rem 1rem;
 
+                    }
+                    [aria-hidden = "true"] {
+                        display: none;
                     }
                 }
 
@@ -384,7 +384,7 @@ main {
         }
 
         .about-section {
-            padding-block: 10rem;
+            padding-block: 10rem 5rem;
 
             p {
                 padding-inline: 8rem;
@@ -407,6 +407,10 @@ main {
                     .scroller {
                         flex-wrap: nowrap;
                         animation: scroll 10s linear infinite;
+
+                        [aria-hidden = "true"] {
+                            display: block;
+                        }
                     }
                 }
             }

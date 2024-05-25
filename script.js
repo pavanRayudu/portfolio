@@ -17,7 +17,8 @@ nav_toggler.addEventListener('click', (e) => {
     }
 
     document.addEventListener('scroll', () => {
-        primaryNav.setAttribute('data-visible', false)
+        navbar__links.setAttribute('data-visible', false)
+        nav_closer.style.display = "none";
 
     })
 })
