@@ -224,6 +224,7 @@ main {
 
                 p:first-child {
                     font-weight: bold;
+                    margin-right: 3rem;
                 }
             }
 
@@ -254,6 +255,8 @@ main {
 
         h1 {
             font-size: 2.5rem;
+            font-family: "Shadows Into Light", cursive;
+            display: inline-block;
         }
 
         p {
@@ -273,7 +276,7 @@ main {
             gap: 2rem;
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 display: flex;
                 align-items: center;
                 gap: 0.5rem;
@@ -283,7 +286,7 @@ main {
             h2::before {
                 content: "";
                 height: 5px;
-                width: 50px;
+                width: 128px;
                 margin-top: 2px;
                 border-radius: 0 5px 5px 0;
                 background: linear-gradient(90deg, transparent, var(--color-primary-300));
@@ -314,6 +317,8 @@ main {
                         background-color: var(--color-primary-300);
                         border-radius: 5px;
                         padding: 0.5rem 1rem;
+                        font-weight: bold;
+                        font-size: 1rem;
 
                     }
                     [aria-hidden = "true"] {
@@ -399,7 +404,7 @@ footer{
         }
 
         .about-section {
-            padding-block: 10rem 5rem;
+            padding-block: 5rem;
 
             p {
                 padding-inline: 8rem;
