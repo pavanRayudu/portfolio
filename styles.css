@@ -397,9 +397,9 @@ main {
 
 footer {
     width: 100%;
-    background-color: var(--color-primary-800);
+    background-color: var(--clr-text);
     margin-top: 2rem;
-    color: var(--color-primary-200);
+    color: var(--clr-body-bg);
     font-size: 0.8rem;
     padding-inline: 1rem;
 
