@@ -1,3 +1,7 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+
+
 const theme_button = document.querySelector('.theme-option');
 const scroller = document.querySelector('.wrapper');
 const nav_toggler = document.querySelector('.nav-toggler');
@@ -63,3 +67,63 @@ function addAnimation() {
 
 }
 // background: url('./assets/sun-svgrepo-com.svg');
+
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBpO1geCM5Jm_G6mD5dZdpy6rm4Qj6cAZI",
+    authDomain: "portfolio-c9627.firebaseapp.com",
+    projectId: "portfolio-c9627",
+    storageBucket: "portfolio-c9627.appspot.com",
+    messagingSenderId: "628496701000",
+    // databaseURL: "https://portfolio-c9627-default-rtdb.firebaseio.com",
+    appId: "1:628496701000:web:a3f0eac8ac245bfb422a7d",
+    measurementId: "G-8SK7Y4YZ71"
+};
+
+const app = initializeApp(firebaseConfig);
+
+
+
+// Initialize Firebase
+let contactFormDB = getDatabase(app)
+
+document.getElementById('contactForm').addEventListener('submit', submitForm)
+
+function submitForm(e) {
+    e.preventDefault();
+    const name = getVal("name");
+    const email = getVal("email");
+    const message = getVal("message");
+
+
+    set(ref(contactFormDB, 'user/' + name),
+        {
+            name: name,
+            email: email,
+            message: message,
+        })
+    clearForm()
+
+
+}
+
+function getVal(id) {
+    return document.getElementById(id).value;
+}
+
+function clearForm() {
+    document.getElementById('name').value = ""
+    document.getElementById('email').value = ""
+    document.getElementById('message').value = ""
+}
+
+
+
+
+
+
+
+
+
+

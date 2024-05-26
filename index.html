@@ -66,8 +66,7 @@
         </div>
     </header>
     <main>
-        <div id="home"></div>
-        <section class="hero-section">
+        <section class="hero-section" id="home">
             <div class="hero-content">
                 <div class="hero-content__headings">
                     <h2>Hi, I'm <span>Pavan...!</span></h2>
@@ -185,6 +184,25 @@
                 </div>
             </div>
         </section>
+        <section class="contact-section" id="contact">
+            <h1>Contact</h1>
+            <form action="" id="contactForm">
+                <div class="form-field">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-field_input" id="name">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-field_input" id="email">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                
+            </form>
+        </section>
 
     </main>
     <footer>
@@ -193,7 +211,9 @@
             <p>Crafted with lots of love </p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
+
 
 </html>
