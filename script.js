@@ -119,6 +119,31 @@ function clearForm() {
 }
 
 
+const projects = document.querySelectorAll('.project');
+
+for (let i = 0; i < projects.length; i++) {
+    projects[i].addEventListener('click', (e) => {
+        redirect(projects[i].classList[1])
+    })
+}
+
+function redirect(num) {
+    switch (num) {
+        case "one":
+            window.location.href = "https://mytodolistapp123.netlify.app/";
+            break;
+        case "two":
+            window.location.href = "https://pavanrayudu.github.io/weather-app/";
+            break;
+        case "three":
+            window.location.href = "https://pavanrayudu.github.io/bmi-calculator/";
+            break;
+
+        default:
+            break;
+    }
+}
+
 
 
 
