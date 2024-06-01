@@ -354,7 +354,7 @@ main {
             gap: 1rem;
 
             .project {
-                width: 320px;
+                width: 350px;
                 padding: 0.5rem;
                 background-color: var(--clr-project-card-bg);
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -489,10 +489,7 @@ footer {
     padding-inline: 1rem;
 
     .footer-elements {
-        display: flex;
-        justify-content: space-between;
-
-
+        text-align: center;
     }
 }
 
@@ -585,6 +582,7 @@ footer {
         }
 
         .projects-section {
+            padding-block: 5rem;
             .projects-container {
                 grid-template-columns: repeat(3, 1fr);
 
