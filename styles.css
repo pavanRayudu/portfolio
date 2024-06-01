@@ -10,8 +10,8 @@
     --clr-primary: #2196f3;
     --clr-input-border: #2e2e2e;
     --clr-input-focus: #4eb2ff;
-    --clr-project-card-bg:#ffffff;
-
+    --clr-project-card-bg: #ffffff;
+    --clr-input-shadow :rgba(78, 178, 255,0.3);
 
 
 }
@@ -24,7 +24,9 @@
     --clr-primary: #2196f3;
     --clr-input-border: #cdcdcd;
     --clr-input-focus: #4eb2ff;
-    --clr-project-card-bg:#272727;
+    --clr-project-card-bg: #272727;
+    --clr-input-shadow : rgba(205, 205, 205,0.3);;
+
 
 
 
@@ -371,15 +373,13 @@ main {
                     border: none;
                     cursor: pointer;
 
-                    &:hover{
-
-                    }
+                    &:hover {}
                 }
 
                 .project-thumbnail {
                     overflow: hidden;
                     width: 100%;
-                    height: 150px;
+                    height: 180px;
                     background-color: rgb(141, 141, 141);
                     border-radius: 0.5rem;
                     display: flex;
@@ -456,7 +456,7 @@ main {
                 textarea:focus {
                     border-color: var(--clr-input-focus);
                     color: var(--clr-text);
-                }
+                    box-shadow: var(--clr-input-shadow) 0px 7px 29px 0px;                }
             }
 
             button {
@@ -583,6 +583,7 @@ footer {
 
         .projects-section {
             padding-block: 5rem;
+
             .projects-container {
                 grid-template-columns: repeat(3, 1fr);
 
